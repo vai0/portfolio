@@ -1,0 +1,21 @@
+{
+  "name": "justin-chi-portfolio",
+  "description": "Justin's Portfolio",
+  "version": "1.0.0",
+  "author": "Justin Chi",
+  "dependencies": {
+    "gatsby": "1.9.247",
+    "gatsby-link": "1.6.40",
+    "gatsby-plugin-react-helmet": "2.0.10",
+    "react-helmet": "5.2.0"
+  },
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "start": "gatsby develop",
+    "format": "prettier --write 'src/**/*.js'"
+  },
+  "devDependencies": {
+    "prettier": "1.12.0"
+  }
+}
