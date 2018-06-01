@@ -1,13 +1,37 @@
 import React from 'react'
-import Link from 'gatsby-link'
 
-const IndexPage = () => (
-  <div>
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <Link to="/page-2/">Go to page 2</Link>
-  </div>
-)
+import Navbar from 'components/Navbar'
+import Hero from 'components/Hero'
+import About from 'components/About'
+import Projects from 'components/Projects'
+import ContactLinks from 'components/ContactLinks'
+import Footer from 'components/Footer'
 
-export default IndexPage
+import projects from 'content/projects'
+import statements from 'content/about-me'
+
+import smoothscroll from 'smoothscroll-polyfill'
+
+smoothscroll.polyfill()
+
+export default class Home extends React.Component {
+  render() {
+    return (
+      <div className="home-container">
+        <Navbar />
+        <Hero />
+        <About statements={statements} />
+        <h2 id="projects" className="section-title">
+          Projects
+        </h2>
+        <Projects projects={projects} />
+        <div className="background" />
+        <h2 id="contact" className="section-title">
+          Contact me!
+        </h2>
+        <ContactLinks />
+        <Footer />
+      </div>
+    )
+  }
+}

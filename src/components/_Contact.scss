@@ -1,0 +1,69 @@
+.contact-links {
+  font-family: 'Camphor', Open Sans, Segoe UI, sans-serif;
+  font-size: 1.2em;
+  text-align: center;
+  margin-top: 150px;
+  padding-bottom: 200px;
+  display: flex;
+  justify-content: center;
+
+  @include mobile {
+    flex-direction: column;
+    margin-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  span {
+    @include mobile {
+      margin: 20px 0;
+    }
+
+    &:after {
+      content: '||';
+      color: $grey;
+      margin: 0 30px;
+
+      @include mobile {
+        content: '';
+        margin: 0;
+      }
+    }
+
+    &:nth-child(3) {
+      &:after {
+        content: '';
+        margin: 0;
+      }
+    }
+  }
+
+  a {
+    position: relative;
+    text-decoration: none;
+    color: $fadedPurple;
+
+    &:after {
+      display: block;
+      position: absolute;
+      left: 0;
+      bottom: -30px;
+      width: 0;
+      height: 8px;
+      background-color: $purple;
+      content: '';
+      transition: width 0.15s;
+
+      @include mobile {
+        bottom: -15px;
+      }
+    }
+
+    &:hover {
+      color: $fadedBlue;
+
+      &:after {
+        width: 100%;
+      }
+    }
+  }
+}

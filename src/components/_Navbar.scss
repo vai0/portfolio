@@ -1,0 +1,50 @@
+.navbar-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 90%;
+  margin: 0 auto;
+
+  @include mobile {
+    justify-content: center;
+    width: 75%;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 286px;
+    font-family: 'Camphor', Open Sans, Segoe UI, sans-serif;
+    font-size: 1.2em;
+    margin-top: 40px;
+
+    @include mobile {
+      font-size: 1em;
+    }
+
+    a {
+      position: relative;
+      text-decoration: none;
+      color: $fadedPurple;
+
+      &:after {
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: -30px;
+        width: 0;
+        height: 8px;
+        background-color: $purple;
+        content: '';
+        transition: width 0.15s;
+      }
+
+      &:hover {
+        color: $fadedBlue;
+
+        &:after {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

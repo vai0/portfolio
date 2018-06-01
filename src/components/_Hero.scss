@@ -1,0 +1,67 @@
+.hero-container {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  a {
+    text-decoration: none;
+    color: $purple;
+    position: relative;
+    font-weight: bold;
+
+    &:hover {
+      background-color: $linkTeal;
+    }
+  }
+
+  @include mobile {
+    margin-top: 15vh;
+  }
+
+  .hero-title {
+    font-family: 'Monaco', Consolas, 'Lucida Console', monospace;
+    font-size: 4.5em;
+    color: $purple;
+    transition: all 0.5s ease;
+
+    &:before {
+      content: '>\a0';
+    }
+
+    @include mobile {
+      font-size: 2.3em;
+    }
+
+    span {
+      background-color: rgba($purple, 0.65);
+      animation: caret 1s steps(1) infinite;
+    }
+
+    @keyframes caret {
+      50% {
+        background-color: transparent;
+      }
+    }
+  }
+
+  .hero-description {
+    font-family: 'Camphor', Open Sans, Segoe UI, sans-serif;
+    font-weight: 200;
+    font-size: 1.3em;
+    line-height: 40px;
+    color: $grey;
+    margin: 80px 0;
+    max-width: 70%;
+    transition: all 0.5s ease;
+
+    @include mobile {
+      font-size: 1.2em;
+      line-height: 30px;
+      max-width: 100%;
+      margin: 50px 0;
+    }
+  }
+}
