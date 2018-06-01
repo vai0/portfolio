@@ -1,20 +1,16 @@
-import React from 'react'
+import React from 'react';
 
-import Navbar from 'components/Navbar'
-import Hero from 'components/Hero'
-import About from 'components/About'
-import Projects from 'components/Projects'
-import ContactLinks from 'components/ContactLinks'
-import Footer from 'components/Footer'
+import Navbar from 'components/Navbar';
+import Hero from 'components/Hero';
+import About from 'components/About';
+import Projects from 'components/Projects';
+import ContactLinks from 'components/ContactLinks';
+import Footer from 'components/Footer';
 
-import projects from 'content/projects'
-import statements from 'content/about-me'
+import projects from 'content/projects';
+import statements from 'content/about-me';
 
-import smoothscroll from 'smoothscroll-polyfill'
-
-smoothscroll.polyfill()
-
-export default class Home extends React.Component {
+export default class Home extends React.PureComponent {
   render() {
     return (
       <div className="home-container">
@@ -32,6 +28,6 @@ export default class Home extends React.Component {
         <ContactLinks />
         <Footer />
       </div>
-    )
+    );
   }
 }

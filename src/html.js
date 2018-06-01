@@ -1,12 +1,12 @@
-import React, { Component } from 'react'
-import * as PropTypes from 'prop-types'
+import React, { Component } from 'react';
+import * as PropTypes from 'prop-types';
 
-let stylesStr
+let stylesStr;
 if (process.env.NODE_ENV === `production`) {
   try {
-    stylesStr = require(`!raw-loader!../public/styles.css`)
+    stylesStr = require(`!raw-loader!../public/styles.css`);
   } catch (e) {
-    console.log(e)
+    console.log(e);
   }
 }
 
@@ -14,18 +14,18 @@ const propTypes = {
   headComponents: PropTypes.node.isRequired,
   body: PropTypes.node.isRequired,
   postBodyComponents: PropTypes.node.isRequired,
-}
+};
 
 class Html extends Component {
   render() {
-    let css
+    let css;
     if (process.env.NODE_ENV === `production`) {
       css = (
         <style
           id="gatsby-inlined-css"
           dangerouslySetInnerHTML={{ __html: stylesStr }}
         />
-      )
+      );
     }
 
     return (
@@ -52,10 +52,10 @@ class Html extends Component {
           {this.props.postBodyComponents}
         </body>
       </html>
-    )
+    );
   }
 }
 
-Html.propTypes = propTypes
+Html.propTypes = propTypes;
 
-module.exports = Html
+module.exports = Html;

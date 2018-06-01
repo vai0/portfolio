@@ -4,11 +4,11 @@
   "version": "1.0.0",
   "author": "Justin Chi",
   "dependencies": {
+    "anchorate": "1.2.3",
     "gatsby": "1.9.247",
     "gatsby-link": "1.6.40",
     "gatsby-plugin-react-helmet": "2.0.10",
-    "react-helmet": "5.2.0",
-    "smoothscroll-polyfill": "0.4.3"
+    "react-helmet": "5.2.0"
   },
   "license": "MIT",
   "scripts": {
@@ -20,6 +20,7 @@
     "eslint": "4.19.1",
     "eslint-plugin-prettier": "2.6.0",
     "gatsby-plugin-postcss-sass": "1.0.20",
+    "gatsby-plugin-sass": "1.0.26",
     "prettier": "1.12.0"
   }
 }

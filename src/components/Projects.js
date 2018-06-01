@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 class Projects extends React.Component {
   render() {
@@ -14,19 +14,19 @@ class Projects extends React.Component {
               projectScreenshot={project.screenshot}
               key={index}
             />
-          )
+          );
         })}
       </div>
-    )
+    );
   }
 }
 
 class ProjectCard extends React.Component {
   componentDidMount() {
     this.refs.screenshot.style.background =
-      "url('images/" + this.props.projectScreenshot + "')"
-    this.refs.screenshot.style.backgroundSize = 'cover'
-    this.refs.screenshot.style.backgroundRepeat = 'no-repeat'
+      "url('images/" + this.props.projectScreenshot + "')";
+    this.refs.screenshot.style.backgroundSize = 'cover';
+    this.refs.screenshot.style.backgroundRepeat = 'no-repeat';
   }
   render() {
     return (
@@ -42,7 +42,7 @@ class ProjectCard extends React.Component {
           <ProjectLinks links={this.props.projectLinks} />
         </div>
       </div>
-    )
+    );
   }
 }
 
@@ -51,16 +51,16 @@ class ProjectSkills extends React.Component {
     return (
       <div className="project-skills">
         {this.props.skills.map((skill, index) => {
-          return <ProjectSkill skill={skill} key={index} />
+          return <ProjectSkill skill={skill} key={index} />;
         })}
       </div>
-    )
+    );
   }
 }
 
 class ProjectSkill extends React.Component {
   render() {
-    return <span className="project-skill">{this.props.skill}</span>
+    return <span className="project-skill">{this.props.skill}</span>;
   }
 }
 
@@ -71,22 +71,22 @@ class ProjectLinks extends React.Component {
         {Object.keys(this.props.links).map((key, index) => {
           return (
             <ProjectLink site={key} link={this.props.links[key]} key={index} />
-          )
+          );
         })}
       </div>
-    )
+    );
   }
 }
 
 class ProjectLink extends React.Component {
   render() {
-    const buttonText = this.props.site === 'github' ? 'view code' : 'try demo'
+    const buttonText = this.props.site === 'github' ? 'view code' : 'try demo';
     return (
       <a href={this.props.link} className="project-link">
         {buttonText}
       </a>
-    )
+    );
   }
 }
 
-export default Projects
+export default Projects;

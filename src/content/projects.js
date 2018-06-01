@@ -1,6 +1,6 @@
 // Screenshot can be any size. just make sure it is close to a 1:1 ratio - a square.
 
-export default (projects = [
+export default [
   {
     title: 'Travlr',
     description:
@@ -93,4 +93,4 @@ export default (projects = [
       preview: 'https://justinchi.me/tomsmetal/',
     },
   },
-])
+];

@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-class ContactLinks extends React.Component {
+class ContactLinks extends React.PureComponent {
   render() {
     return (
       <div className="contact-links">
@@ -14,8 +14,8 @@ class ContactLinks extends React.Component {
           <a href="https://github.com/vai0">github</a>
         </span>
       </div>
-    )
+    );
   }
 }
 
-export default ContactLinks
+export default ContactLinks;

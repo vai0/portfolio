@@ -12,7 +12,7 @@
 
 @font-face {
   font-family: 'Monaco';
-  src: url('./fonts/monaco-webfont.woff') format('woff'),
+  src: url('./fonts/monaco-webfont.woff') format('woff');
 }
 
 html {
@@ -20,10 +20,10 @@ html {
 }
 
 body {
-  background-color: #F6F9FC;
+  background-color: #f6f9fc;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  font-feature-settings: "pnum";
+  font-feature-settings: 'pnum';
   font-variant-numeric: proportional-nums;
 }
 
@@ -64,8 +64,8 @@ body {
 }
 
 .section-title:after {
-  content: " ";
-  border:4px solid $purple;
+  content: ' ';
+  border: 4px solid $purple;
   display: block;
   margin: 0 auto;
   margin-top: 30px;

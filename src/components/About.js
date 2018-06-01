@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 class About extends React.PureComponent {
   render() {
@@ -15,7 +15,7 @@ class About extends React.PureComponent {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
@@ -24,7 +24,7 @@ class Statements extends React.PureComponent {
     return (
       <div>
         {this.props.statements.map((statement, index) => {
-          return <Statement statement={statement} key={index} />
+          return <Statement statement={statement} key={index} />;
         })}
         <div className="statement">
           <div className="input-statement">
@@ -32,7 +32,7 @@ class Statements extends React.PureComponent {
           </div>
         </div>
       </div>
-    )
+    );
   }
 }
 
@@ -46,8 +46,8 @@ class Statement extends React.PureComponent {
           dangerouslySetInnerHTML={{ __html: this.props.statement.return }}
         />
       </div>
-    )
+    );
   }
 }
 
-export default About
+export default About;

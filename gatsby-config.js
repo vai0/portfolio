@@ -3,9 +3,7 @@ module.exports = {
     title: 'Gatsby Default Starter',
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    {
-      resolve: `gatsby-plugin-postcss-sass`,
-    },
+    `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sass`
   ],
 }

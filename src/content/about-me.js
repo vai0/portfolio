@@ -1,4 +1,4 @@
-export default (statements = [
+export default [
   {
     input: 'Justin.currentLocation',
     return: '"San Jose, CA"',
@@ -27,4 +27,4 @@ export default (statements = [
     return:
       '["Sass", "JavaScript", "Python", "React", "Redux", "Flask", "webpack", "git"]',
   },
-])
+];

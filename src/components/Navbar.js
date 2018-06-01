@@ -1,39 +1,32 @@
-import React from 'react'
+import React from 'react';
+import Link from "gatsby-link";
 
-class Navbar extends React.Component {
-  constructor(props) {
-    super(props)
-  }
-
+class Navbar extends React.PureComponent {
   componentDidMount() {
-    const self = this
-
-    document.addEventListener('DOMContentLoaded', function(event) {
-      self.refs.navbar.addEventListener('click', function(e) {
-        if (e.target.innerText === 'Projects') {
-          document
-            .getElementById('projects')
-            .scrollIntoView({ behavior: 'smooth' })
-        } else if (e.target.innerText === 'Contact') {
-          document
-            .getElementById('contact')
-            .scrollIntoView({ behavior: 'smooth' })
-        }
-      })
-    })
+    this.refs.navbar.addEventListener('click', e => {
+      if (e.target.innerText === 'Projects') {
+        document
+          .getElementById('projects')
+          .scrollIntoView({ behavior: 'smooth' });
+      } else if (e.target.innerText === 'Contact') {
+        document
+          .getElementById('contact')
+          .scrollIntoView({ behavior: 'smooth' });
+      }
+    });
   }
 
   render() {
     return (
       <div className="navbar-container">
         <nav className="navbar" ref="navbar">
-          <a href="https://justinchi.me">Home</a>
-          <a href="#projects">Projects</a>
-          <a href="#contact">Contact</a>
+          <Link to="/">Home</Link>
+          <Link to="#projects">Projects</Link>
+          <Link to="#contact">Contact</Link>
         </nav>
       </div>
-    )
+    );
   }
 }
 
-export default Navbar
+export default Navbar;

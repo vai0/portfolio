@@ -1,9 +1,9 @@
-import React from 'react'
-import Typewriter from 'components/Typewriter'
+import React from 'react';
+import Typewriter from 'components/Typewriter';
 
-class Hero extends React.Component {
+class Hero extends React.PureComponent {
   constructor(props) {
-    super(props)
+    super(props);
   }
 
   render() {
@@ -16,8 +16,8 @@ class Hero extends React.Component {
           below.
         </div>
       </div>
-    )
+    );
   }
 }
 
-export default Hero
+export default Hero;
