@@ -1,6 +1,7 @@
 .projects-container {
   width: 90%;
   margin: 0 auto;
+  font-family: 'Camphor', Open Sans, Segoe UI, sans-serif;
 
   .project-card {
     position: relative;
@@ -12,53 +13,49 @@
     border-radius: 4px;
     box-shadow: 0 50px 100px rgba(50, 50, 93, 0.05),
       0 15px 35px rgba(50, 50, 93, 0.1), 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: all 0.5s ease;
     overflow: hidden;
 
     @include mobile {
       margin-bottom: 40px;
     }
 
-    .project-screenshot {
-      position: absolute;
+    .project-image {
+      width: 80%;
+      position: absolute !important; // overide gatsby-image style
       top: 0;
       left: 0;
-      width: 60%;
-      height: 100%;
 
-      @include mobile {
+      @include tablet {
         display: none;
       }
     }
 
     .project-background {
       position: absolute;
-      top: 0;
-      right: 0;
-      height: 100%;
-      width: 75%;
+      top: -1px;
+      right: -1px;
+      height: 110%;
+      width: 83%;
       background: url('../images/project-background-white.svg');
       background-size: cover;
 
-      @include mobile {
+      @include tablet {
         display: none;
       }
     }
 
     .project-content {
       padding: 60px;
-      width: 40%;
+      width: 50%;
       z-index: 2;
-      transition: all 0.5s ease;
 
-      @include mobile {
+      @include tablet {
         width: 100%;
         padding: 35px;
         box-sizing: border-box;
       }
 
       h3 {
-        font-family: 'Camphor', Open Sans, Segoe UI, sans-serif;
         font-weight: 500;
         font-size: 1.8em;
         line-height: 38px;
@@ -70,28 +67,28 @@
       .project-links {
         display: flex;
         justify-content: flex-start;
-        margin-top: 20px;
+        align-items: center;
         flex-wrap: wrap;
 
         .project-link {
-          margin: 10px 20px 0 0;
+          margin-right: 20px;
+          margin-top: 20px;
           white-space: nowrap;
           display: inline-block;
-          height: 40px;
           line-height: 40px;
           padding: 0 14px;
           box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11),
             0 1px 3px rgba(0, 0, 0, 0.08);
           border-radius: 4px;
-          text-transform: uppercase;
           letter-spacing: 0.025em;
           text-decoration: none;
           transition: all 0.15s ease;
-          color: #fff;
-          background: $purple;
           font-family: 'Camphor', Open Sans, Segoe UI, sans-serif;
           font-size: 0.9em;
           font-weight: 600;
+          box-sizing: border-box;
+          background: $purple;
+          color: #fff;
 
           &:hover {
             background: $fadedBlue;
@@ -99,26 +96,28 @@
             box-shadow: 0 7px 14px rgba(50, 50, 93, 0.1),
               0 3px 6px rgba(0, 0, 0, 0.08);
           }
+
+          &.secondary {
+            background: #fff;
+            color: $purple;
+
+            &:hover {
+              background: #fff;
+            }
+          }
         }
       }
 
       p {
-        font-family: 'Camphor', Open Sans, Segoe UI, sans-serif;
         margin-bottom: 30px;
         line-height: 27px;
         color: $grey;
-
-        a {
-          text-decoration: none;
-          color: $purple;
-          position: relative;
-          font-weight: bold;
-
-          &:hover {
-            background-color: $linkTeal;
-          }
-        }
       }
+
+      a {
+        font-weight: bold;
+      }
+
       .project-skills {
         display: flex;
         flex-wrap: wrap;

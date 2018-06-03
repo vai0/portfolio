@@ -11,9 +11,9 @@ class Hero extends React.PureComponent {
       <div className="hero-container">
         <Typewriter className="hero-title" text="Justin Chi" />
         <div className="hero-description">
-          I am a web developer in the bay area. My passion is building simple,
-          beautiful user experiences. Check out my <a href="#projects">work</a>{' '}
-          below.
+          I am a web developer in the bay area.<br />My passion is building
+          simple, beautiful user experiences.<br />Check out my{' '}
+          <a href="#projects">work</a> below.
         </div>
       </div>
     );

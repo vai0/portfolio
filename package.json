@@ -3,24 +3,32 @@
   "description": "Justin's Portfolio",
   "version": "1.0.0",
   "author": "Justin Chi",
-  "dependencies": {
-    "anchorate": "1.2.3",
-    "gatsby": "1.9.247",
-    "gatsby-link": "1.6.40",
-    "gatsby-plugin-react-helmet": "2.0.10",
-    "react-helmet": "5.2.0"
-  },
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "start": "gatsby develop",
+    "serve": "gatsby serve",
     "format": "prettier --write 'src/**/*.js'"
   },
   "devDependencies": {
+    "anchorate": "1.2.3",
     "eslint": "4.19.1",
     "eslint-plugin-prettier": "2.6.0",
-    "gatsby-plugin-postcss-sass": "1.0.20",
+    "gatsby": "1.9.269",
+    "gatsby-image": "1.0.51",
+    "gatsby-link": "1.6.44",
+    "gatsby-plugin-react-helmet": "2.0.11",
     "gatsby-plugin-sass": "1.0.26",
-    "prettier": "1.12.0"
+    "gatsby-plugin-sharp": "1.6.46",
+    "gatsby-source-filesystem": "1.5.38",
+    "gatsby-transformer-sharp": "1.6.26",
+    "prettier": "1.13.4",
+    "react-helmet": "5.2.0"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome": "1.1.8",
+    "@fortawesome/fontawesome-free-brands": "5.0.13",
+    "@fortawesome/fontawesome-free-solid": "5.0.13",
+    "@fortawesome/react-fontawesome": "0.0.20"
   }
 }

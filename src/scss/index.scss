@@ -15,16 +15,22 @@
   src: url('./fonts/monaco-webfont.woff') format('woff');
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   background-color: #f6f9fc;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   font-feature-settings: 'pnum';
   font-variant-numeric: proportional-nums;
+}
+
+a {
+  text-decoration: none;
+  color: $purple;
+  transition: 0.1s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+  }
 }
 
 #topBackground {
@@ -46,6 +52,10 @@ body {
   max-width: 1100px;
   margin: 0 auto;
   padding: 0 40px;
+
+  @include mobile {
+    padding: 0 10px;
+  }
 }
 
 .section-title {

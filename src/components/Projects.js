@@ -1,52 +1,14 @@
 import React from 'react';
+import Img from 'gatsby-image';
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
-class Projects extends React.Component {
+class ProjectSkill extends React.PureComponent {
   render() {
-    return (
-      <div className="projects-container">
-        {this.props.projects.map((project, index) => {
-          return (
-            <ProjectCard
-              projectTitle={project.title}
-              projectDescription={project.description}
-              projectSkills={project.skills}
-              projectLinks={project.links}
-              projectScreenshot={project.screenshot}
-              key={index}
-            />
-          );
-        })}
-      </div>
-    );
+    return <span className="project-skill">{this.props.skill}</span>;
   }
 }
 
-class ProjectCard extends React.Component {
-  componentDidMount() {
-    this.refs.screenshot.style.background =
-      "url('images/" + this.props.projectScreenshot + "')";
-    this.refs.screenshot.style.backgroundSize = 'cover';
-    this.refs.screenshot.style.backgroundRepeat = 'no-repeat';
-  }
-  render() {
-    return (
-      <div className="project-card">
-        <div className="project-screenshot" ref="screenshot" />
-        <div className="project-background" />
-        <div className="project-content">
-          <h3>{this.props.projectTitle}</h3>
-          <p
-            dangerouslySetInnerHTML={{ __html: this.props.projectDescription }}
-          />
-          <ProjectSkills skills={this.props.projectSkills} />
-          <ProjectLinks links={this.props.projectLinks} />
-        </div>
-      </div>
-    );
-  }
-}
-
-class ProjectSkills extends React.Component {
+class ProjectSkills extends React.PureComponent {
   render() {
     return (
       <div className="project-skills">
@@ -58,33 +20,69 @@ class ProjectSkills extends React.Component {
   }
 }
 
-class ProjectSkill extends React.Component {
+class ProjectLinks extends React.PureComponent {
   render() {
-    return <span className="project-skill">{this.props.skill}</span>;
-  }
-}
-
-class ProjectLinks extends React.Component {
-  render() {
+    const { github, preview } = this.props.links;
     return (
       <div className="project-links">
-        {Object.keys(this.props.links).map((key, index) => {
-          return (
-            <ProjectLink site={key} link={this.props.links[key]} key={index} />
-          );
-        })}
+        <a href={preview} rel="noopener" className="project-link">
+          Live Demo <FontAwesomeIcon icon="external-link-alt" />
+        </a>
+        <a href={github} rel="noopener" className="project-link secondary">
+          <FontAwesomeIcon icon={['fab', 'github']} /> View Source
+        </a>
       </div>
     );
   }
 }
 
-class ProjectLink extends React.Component {
+class ProjectImage extends React.PureComponent {
   render() {
-    const buttonText = this.props.site === 'github' ? 'view code' : 'try demo';
     return (
-      <a href={this.props.link} className="project-link">
-        {buttonText}
-      </a>
+      <Img outerWrapperClassName="project-image" sizes={this.props.image} />
+    );
+  }
+}
+
+class ProjectCard extends React.PureComponent {
+  render() {
+    const { image, title, description, skills, links } = this.props;
+
+    return (
+      <div className="project-card">
+        <ProjectImage image={image} />
+        <div className="project-background" />
+        <div className="project-content">
+          <h3>{title}</h3>
+          <p dangerouslySetInnerHTML={{ __html: description }} />
+          <ProjectSkills skills={skills} />
+          <ProjectLinks links={links} />
+        </div>
+      </div>
+    );
+  }
+}
+
+class Projects extends React.PureComponent {
+  render() {
+    const { projects, images } = this.props;
+    return (
+      <div className="projects-container">
+        {projects.map(proj => (
+          <ProjectCard
+            title={proj.title}
+            description={proj.description}
+            skills={proj.skills}
+            links={proj.links}
+            image={
+              images.filter(
+                img => img.node.sizes.originalName === proj.image
+              )[0].node.sizes
+            }
+            key={proj.title}
+          />
+        ))}
+      </div>
     );
   }
 }
