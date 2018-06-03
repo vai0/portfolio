@@ -49,12 +49,12 @@ a {
 }
 
 .container-lg {
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 0 40px;
 
   @include mobile {
-    padding: 0 10px;
+    padding: 0 20px;
   }
 }
 
