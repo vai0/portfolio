@@ -17,6 +17,7 @@
     "gatsby": "1.9.269",
     "gatsby-image": "1.0.51",
     "gatsby-link": "1.6.44",
+    "gatsby-plugin-google-analytics": "1.0.31",
     "gatsby-plugin-react-helmet": "2.0.11",
     "gatsby-plugin-sass": "1.0.26",
     "gatsby-plugin-sharp": "1.6.46",
