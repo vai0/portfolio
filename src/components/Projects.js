@@ -1,5 +1,4 @@
 import React from 'react';
-import Img from 'gatsby-image';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 class ProjectSkill extends React.PureComponent {
@@ -25,21 +24,23 @@ class ProjectLinks extends React.PureComponent {
     const { github, preview } = this.props.links;
     return (
       <div className="project-links">
-        <a href={preview} rel="noopener" className="project-link">
+        <a
+          href={preview}
+          rel="noopener"
+          target="_blank"
+          className="project-link"
+        >
           Live Demo <FontAwesomeIcon icon="external-link-alt" />
         </a>
-        <a href={github} rel="noopener" className="project-link secondary">
+        <a
+          href={github}
+          rel="noopener"
+          target="_blank"
+          className="project-link secondary"
+        >
           <FontAwesomeIcon icon={['fab', 'github']} /> View Source
         </a>
       </div>
-    );
-  }
-}
-
-class ProjectImage extends React.PureComponent {
-  render() {
-    return (
-      <Img outerWrapperClassName="project-image" sizes={this.props.image} />
     );
   }
 }
@@ -50,7 +51,7 @@ class ProjectCard extends React.PureComponent {
 
     return (
       <div className="project-card">
-        <ProjectImage image={image} />
+        <img className="project-image" src={image} />
         <div className="project-background" />
         <div className="project-content">
           <h3>{title}</h3>
@@ -65,7 +66,7 @@ class ProjectCard extends React.PureComponent {
 
 class Projects extends React.PureComponent {
   render() {
-    const { projects, images } = this.props;
+    const { projects } = this.props;
     return (
       <div className="projects-container">
         {projects.map(proj => (
@@ -74,11 +75,7 @@ class Projects extends React.PureComponent {
             description={proj.description}
             skills={proj.skills}
             links={proj.links}
-            image={
-              images.filter(
-                img => img.node.sizes.originalName === proj.image
-              )[0].node.sizes
-            }
+            image={proj.image}
             key={proj.title}
           />
         ))}

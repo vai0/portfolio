@@ -1,3 +1,11 @@
+import travlr from 'images/travlr.png';
+import stockmarketchart from 'images/stockmarketchart.png';
+import wakeyalarmclock from 'images/wakeyalarmclock.png';
+import wakeybackgrounds from 'images/wakeybackgrounds.png';
+import calculator from 'images/calculator.png';
+import portfolio from 'images/portfolio.png';
+import tomsmetal from 'images/tomsmetal.png';
+
 // image can be any size. just make sure it is close to a 1:1 ratio - a square.
 
 export default [
@@ -6,7 +14,7 @@ export default [
     description:
       'Travel smarter by saving the places you want to go. This project was an assignment given for an interview. The requirements were to build a web-app that calls the Google Places API. It must include a map with pins and a list of locations, with some interactivity between the two.',
     skills: ['HTML5', 'CSS3', 'Sass', 'JavaScript', 'ES6', 'ReactJS', 'Redux'],
-    image: 'travlr.png',
+    image: travlr,
     links: {
       github: 'https://github.com/vai0/travlr',
       preview: 'https://travlr.justinchi.me/',
@@ -17,7 +25,7 @@ export default [
     description:
       'This project is based off this <a href="https://www.freecodecamp.com/challenges/chart-the-stock-market">challenge</a>. Wrangled with styling HighCharts and learned the use of Promises. Data is from the <a href="https://developer.tradier.com/documentation">Tradier API</a>. Search autocomplete relies on the lookup endpoint and sometimes runs slow. Please be patient!',
     skills: ['HTML5', 'CSS3', 'Sass', 'JavaScript', 'ES6', 'ReactJS'],
-    image: 'stockmarketchart.png',
+    image: stockmarketchart,
     links: {
       github: 'https://github.com/vai0/stockmarketchart',
       preview: 'https://stock.justinchi.me/',
@@ -36,7 +44,7 @@ export default [
       'Polymer',
       'Material Design',
     ],
-    image: 'wakeyalarmclock.png',
+    image: wakeyalarmclock,
     links: {
       github: 'https://github.com/vai0/alarmclock',
       preview: 'https://alarmclock.justinchi.me/',
@@ -47,7 +55,7 @@ export default [
     description:
       'Animated backgrounds for when the alarm is triggered in the <a href="https://justinchi.me/alarmclock/">Wakey Alarm Clock</a> app. CSS animations and a bit of JavaScript for the snow and rain. No external libraries.',
     skills: ['HTML5', 'CSS3', 'Sass', 'JavaScript'],
-    image: 'wakeybackgrounds.png',
+    image: wakeybackgrounds,
     links: {
       github: 'https://github.com/vai0/weather-animations',
       preview: 'https://weather-anim.justinchi.me/',
@@ -65,7 +73,7 @@ export default [
       'ES6',
       'Material Components',
     ],
-    image: 'calculator.png',
+    image: calculator,
     links: {
       github: 'https://github.com/vai0/material_calculator',
       preview: 'https://calc.justinchi.me/',
@@ -76,7 +84,7 @@ export default [
     description:
       'This page! Responsive website built with ReactJS. The site content is passed in as JSON data, auto-generating components for easy maintenance.',
     skills: ['HTML5', 'CSS3', 'Sass', 'JavaScript', 'ReactJS'],
-    image: 'portfolio.png',
+    image: portfolio,
     links: {
       github: 'https://github.com/vai0/portfolio',
       preview: 'https://www.justinchi.me/',
@@ -87,7 +95,7 @@ export default [
     description:
       'A revamped version of the website of the company at my first job. You can see the original site <a href="http://www.tomsmetal.com/">here</a>. The site supports mobile, tablet, and desktop sizes. Media queries only - no external libraries or JavaScript.',
     skills: ['HTML5', 'CSS3'],
-    image: 'tomsmetal.png',
+    image: tomsmetal,
     links: {
       github: 'https://github.com/vai0/tomsmetal_site',
       preview: 'https://tomsmetal.justinchi.me/',

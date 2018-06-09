@@ -20,10 +20,7 @@ export default class Home extends React.PureComponent {
         <h2 id="projects" className="section-title">
           Projects
         </h2>
-        <Projects
-          projects={projects}
-          images={this.props.data.allImageSharp.edges}
-        />
+        <Projects projects={projects} />
         <div className="background" />
         <h2 id="contact" className="section-title">
           Contact me!
@@ -34,18 +31,3 @@ export default class Home extends React.PureComponent {
     );
   }
 }
-
-export const query = graphql`
-  query ProjectImagesQuery {
-    allImageSharp {
-      edges {
-        node {
-          sizes(maxWidth: 700) {
-            originalName
-            ...GatsbyImageSharpSizes_withWebp
-          }
-        }
-      }
-    }
-  }
-`;
