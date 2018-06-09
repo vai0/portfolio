@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import Scrollchor from 'react-scrollchor';
 
 class Navbar extends React.PureComponent {
   componentDidMount() {
@@ -20,9 +20,8 @@ class Navbar extends React.PureComponent {
     return (
       <div className="navbar-container">
         <nav className="navbar" ref="navbar">
-          <Link to="/">Home</Link>
-          <Link to="#projects">Projects</Link>
-          <Link to="#contact">Contact</Link>
+          <Scrollchor to="#projects">Projects</Scrollchor>
+          <Scrollchor to="#contact">Contact</Scrollchor>
         </nav>
       </div>
     );

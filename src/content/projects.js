@@ -9,7 +9,7 @@ export default [
     image: 'travlr.png',
     links: {
       github: 'https://github.com/vai0/travlr',
-      preview: 'https://justinchi.me/travlr/',
+      preview: 'https://travlr.justinchi.me/',
     },
   },
   {
@@ -20,7 +20,7 @@ export default [
     image: 'stockmarketchart.png',
     links: {
       github: 'https://github.com/vai0/stockmarketchart',
-      preview: 'https://justinchi.me/stockmarketchart/',
+      preview: 'https://stock.justinchi.me/',
     },
   },
   {
@@ -39,7 +39,7 @@ export default [
     image: 'wakeyalarmclock.png',
     links: {
       github: 'https://github.com/vai0/alarmclock',
-      preview: 'https://justinchi.me/alarmclock/',
+      preview: 'https://alarmclock.justinchi.me/',
     },
   },
   {
@@ -50,7 +50,7 @@ export default [
     image: 'wakeybackgrounds.png',
     links: {
       github: 'https://github.com/vai0/weather-animations',
-      preview: 'https://justinchi.me/alarmclockweather',
+      preview: 'https://weather-anim.justinchi.me/',
     },
   },
   {
@@ -68,7 +68,7 @@ export default [
     image: 'calculator.png',
     links: {
       github: 'https://github.com/vai0/material_calculator',
-      preview: 'https://justinchi.me/calculator',
+      preview: 'https://calc.justinchi.me/',
     },
   },
   {
@@ -78,8 +78,8 @@ export default [
     skills: ['HTML5', 'CSS3', 'Sass', 'JavaScript', 'ReactJS'],
     image: 'portfolio.png',
     links: {
-      github: 'https://github.com/vai0/portfolio_3',
-      preview: 'https://justinchi.me/',
+      github: 'https://github.com/vai0/portfolio',
+      preview: 'https://www.justinchi.me/',
     },
   },
   {
@@ -90,7 +90,7 @@ export default [
     image: 'tomsmetal.png',
     links: {
       github: 'https://github.com/vai0/tomsmetal_site',
-      preview: 'https://justinchi.me/tomsmetal/',
+      preview: 'https://tomsmetal.justinchi.me/',
     },
   },
 ];

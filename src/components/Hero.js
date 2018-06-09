@@ -1,5 +1,6 @@
 import React from 'react';
 import Typewriter from 'components/Typewriter';
+import Scrollchor from 'react-scrollchor';
 
 class Hero extends React.PureComponent {
   constructor(props) {
@@ -11,9 +12,9 @@ class Hero extends React.PureComponent {
       <div className="hero-container">
         <Typewriter className="hero-title" text="Justin Chi" />
         <div className="hero-description">
-          I am a web developer in the bay area.<br />My passion is building
+          I am a web developer at MemSQL. My passion is building
           simple, beautiful user experiences.<br />Check out my{' '}
-          <a href="#projects">work</a> below.
+          <Scrollchor to="#projects">side-projects</Scrollchor> below.
         </div>
       </div>
     );
