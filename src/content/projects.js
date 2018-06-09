@@ -1,10 +1,10 @@
-import travlr from 'images/travlr.png';
-import stockmarketchart from 'images/stockmarketchart.png';
-import wakeyalarmclock from 'images/wakeyalarmclock.png';
+import travlr from 'images/travlr.jpg';
+import stockmarketchart from 'images/stockmarketchart.jpg';
+import wakeyalarmclock from 'images/wakeyalarmclock.jpg';
 import wakeybackgrounds from 'images/wakeybackgrounds.png';
-import calculator from 'images/calculator.png';
+import calculator from 'images/calculator.jpg';
 import portfolio from 'images/portfolio.png';
-import tomsmetal from 'images/tomsmetal.png';
+import tomsmetal from 'images/tomsmetal.jpg';
 
 // image can be any size. just make sure it is close to a 1:1 ratio - a square.
 
